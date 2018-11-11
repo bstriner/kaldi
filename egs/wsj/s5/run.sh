@@ -6,11 +6,6 @@ train=true   # set to false to disable the training-related scripts
              # are using at least --stage 1.
 decode=true  # set to false to disable the decoding-related scripts.
 
-. ./cmd.sh ## You'll want to change cmd.sh to something that will work on your system.
-           ## This relates to the queue.
-. utils/parse_options.sh  # e.g. this parses the --stage option if supplied.
-
-
 # This is a shell script, but it's recommended that you run the commands one by
 # one by copying and pasting into the shell.
 
@@ -26,6 +21,9 @@ decode=true  # set to false to disable the decoding-related scripts.
 [[ -z "$wsj0" ]] && export wsj0=/export/corpora5/LDC/LDC93S6B
 [[ -z "$wsj1" ]] && export wsj1=/export/corpora5/LDC/LDC94S13B
 
+. ./cmd.sh ## You'll want to change cmd.sh to something that will work on your system.
+           ## This relates to the queue.
+. utils/parse_options.sh  # e.g. this parses the --stage option if supplied.
 
 if [ $stage -le 0 ]; then
   # data preparation.
