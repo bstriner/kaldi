@@ -10,10 +10,10 @@
 # Begin configuration section.
 nj=4
 cmd=run.pl
-mfcc_config=conf/mfcc.conf
+mfcc_config=conf/mfcc_hires.conf
 pitch_config=conf/pitch.conf
-pitch_postprocess_config=
-paste_length_tolerance=2
+pitch_postprocess_config=conf/pitch_process.conf
+paste_length_tolerance=8
 compress=true
 write_utt2num_frames=false  # if true writes utt2num_frames
 # End configuration section.
